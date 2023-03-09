@@ -1,6 +1,6 @@
 /**
  * @fileoverview -
- * @author: afridek 
+ * @author: afridek
  * @version: 1.0.0
  * @since: 2023-02-28
  * */

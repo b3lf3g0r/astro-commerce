@@ -8,10 +8,10 @@ import mongoose from 'mongoose';
 
 const Customer = new mongoose.Schema(
   {
-  	fullNames: {
-  		type: String,
-  		required: true,	
-  	},
+    fullNames: {
+      type: String,
+      required: true,
+    },
     billingAddress: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Address',

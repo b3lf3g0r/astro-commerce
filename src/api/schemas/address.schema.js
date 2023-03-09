@@ -40,5 +40,5 @@ const Address = new mongoose.Schema(
   },
   { timestamps: true }
 );
--
+
 export default mongoose.model('Address', Address);
