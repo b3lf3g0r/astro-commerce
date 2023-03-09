@@ -43,7 +43,7 @@
 
 > To run this project, you will need to have the following installed. Node v16.0.0 or higher, to install using [nvm](https://github.com/nvm-sh/nvm) and npm
 
-***Clone the project**
+**\*Clone the project**
 
 ```bash
   git clone https://github.com/b3lf3g0r/astro-commerce
