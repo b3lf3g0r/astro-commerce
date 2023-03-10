@@ -84,7 +84,7 @@ jobs:
             - ~/.npm
       - run:
           name: run jest tests
-          command: npm run test
+          command: npm test
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -93,6 +93,6 @@ workflows:
     jobs:
       - prettier
       - eslint
-#  code-test:
-#    jobs:
-#      - jest
+ code-test:
+   jobs:
+     - jest
