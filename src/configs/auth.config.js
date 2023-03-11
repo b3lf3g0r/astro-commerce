@@ -13,10 +13,10 @@ export const authConfig = {
     authorization_key:
       process.env.NODE_ENV === 'production'
         ? process.env.JWT_AUTHORIZATION_KEY
-        : 'authorization-key',
+        : process.env.JWT_PUBLIC_AUTHORIZATION_KEY,
     password_key:
       process.env.NODE_ENV === 'production'
         ? process.env.JWT_PASSWORD_KEY
-        : 'password-key',
+        : process.env.JWT_PUBLIC_PASSWORD_KEY,
   },
 };
