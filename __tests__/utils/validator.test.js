@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
 /**
- * @fileoverview -
- * @author: afridek
- * @version: 1.0.0
- * @since: 2023-02-15
- */
+ * @fileoverview
+ * @author b3lf3g0r
+ * @version 1.0.0
+ * @since 2023-03-09
+ * */
 import chai from 'chai';
 
 import Validator from '../../src/utils/validator.js';

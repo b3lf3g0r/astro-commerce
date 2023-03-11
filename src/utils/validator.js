@@ -20,7 +20,7 @@ export default class Validator {
     new Promise((resolve, reject) => {
       validator.isEmail(email)
         ? resolve(email)
-        : reject(new Error('Please enter a valid email.'));
+        : reject('Please enter a valid email address.');
     });
 
   /**
@@ -36,7 +36,7 @@ export default class Validator {
       const valid_mobile = mobile.replace(/\s/g, '');
       validator.isMobilePhone(valid_mobile, ['en-ZA'])
         ? resolve(valid_mobile)
-        : reject(new Error('Please enter a valid mobile number.'));
+        : reject('Please enter a valid mobile number.');
     });
 
   /**
@@ -58,19 +58,13 @@ export default class Validator {
       is_password_match
         ? reject(new Error('Sorry, passwords do not match.'))
         : !confirm_password.match(/[a-z]/g)
-        ? reject(
-            new Error('Password must contain at least one lowercase letter.')
-          )
+        ? reject('Password must contain at least one lowercase letter.')
         : !confirm_password.match(/[A-Z]/g)
-        ? reject(
-            new Error('Password must contain at least one uppercase letter.')
-          )
+        ? reject('Password must contain at least one uppercase letter.')
         : !confirm_password.match(/\d/g)
-        ? reject(new Error('Password must contain at least one digit.'))
+        ? reject('Password must contain at least one digit.')
         : 8 > confirm_password.length
-        ? reject(
-            new Error('Sorry, password must be at least 8 characters long.')
-          )
+        ? reject('Sorry, password must be at least 8 characters long.')
         : resolve(confirm_password);
     });
 }
