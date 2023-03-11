@@ -12,6 +12,7 @@ import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
 
+import { CustomerAuthRoutes } from './api/routes/routes.js';
 dotenv.config();
 
 const app = express();
@@ -32,5 +33,7 @@ app.use(helmet());
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
+
+app.use('/v1', new CustomerAuthRoutes().init());
 
 export { app };
