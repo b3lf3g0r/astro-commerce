@@ -28,6 +28,12 @@ export default class CustomerAuthService {
     this.passwordService = new PasswordService();
   }
 
+  /**
+   * @description - Sign in customer
+   * @param {string} username - username
+   * @param {string} password - password
+   *
+   */
   SignIn = (username, password) =>
     new Promise((resolve, reject) => {
       // validate username
@@ -154,10 +160,10 @@ export default class CustomerAuthService {
             })
             .catch((AccountError) => {
               reject({
-                error: `[CustomerAuthService.SignIn] userHelper.AccountExist => ${AccountError}`,
+                status_code: 500,
                 data: {
-                  status_code: 500,
                   data: { message: 'Sorry, failed to sign in.' },
+                  error: `[CustomerAuthService.SignIn] userHelper.AccountExist => ${AccountError}`,
                 },
               });
             });

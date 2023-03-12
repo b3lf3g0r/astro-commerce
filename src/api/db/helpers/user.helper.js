@@ -83,7 +83,7 @@ export default class UserHelper {
    * @description edit user document using ID
    * @param {String} id - user ID
    * @param {Object} data - user data to update
-   * @example Edit('f5f5f5f5f5f5f5f5f5', {username: 'john.doe@gmail.com', password: 'new-8347hased3489-pass'})
+   * @example Edit('f5f5f5f5f5f5f5f5f5', {username: 'john.doe@gmail.com', mobile: "", password: 'new-8347hased3489-pass'})
    * @return {Promise} - A promise that resolve to a string message or reject with an error.
    */
   Edit = (id, data) =>
@@ -97,6 +97,7 @@ export default class UserHelper {
         {
           $set: {
             username: data.username,
+            mobile: data.mobile,
             password: data.password,
           },
         },
