@@ -12,8 +12,8 @@ export const mailConfig = {
   mailgen: {
     theme: 'default',
     product: {
-      name: process.env.MAILGEN_APP_PRODUCT_NAME,
-      link: process.env.MAILGEN_APP_LINK,
+      name: process.env.MAILGEN_APP_NAME,
+      link: process.env.MAILGEN_APP_URL,
       logo: process.env.MAILGEN_APP_LOGO,
       copyright: process.env.MAILGEN_APP_COPYRIGHT,
     },

@@ -11,9 +11,9 @@ dotenv.config();
 export const dbConfig = {
   mongodb: {
     url:
-      process.env.NODE_ENV === 'development'
-        ? process.env.MONGODB_URL
-        : process.env.MONGODB_URL_LIVE,
+      process.env.NODE_ENV === 'production'
+        ? process.env.MONGODB_URL_LIVE
+        : process.env.MONGODB_URL_LOCAL,
   },
   redis: {
     host: process.env.REDIS_HOST,

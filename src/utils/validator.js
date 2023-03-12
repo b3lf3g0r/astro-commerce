@@ -56,7 +56,7 @@ export default class Validator {
       }
 
       is_password_match
-        ? reject(new Error('Sorry, passwords do not match.'))
+        ? reject('Sorry, passwords do not match.')
         : !confirm_password.match(/[a-z]/g)
         ? reject('Password must contain at least one lowercase letter.')
         : !confirm_password.match(/[A-Z]/g)
