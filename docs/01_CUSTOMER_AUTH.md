@@ -14,6 +14,8 @@
 
 ### _SIGN IN_
 
+> This endpoint signs in an existing user and return an authorization token
+
 ```sh
 curl -X POST \
   'http://127.0.0.1:5500/v1/sign-in' \
@@ -21,12 +23,14 @@ curl -X POST \
   --header 'User-Agent: Thunder Client (https://www.thunderclient.com)' \
   --header 'Content-Type: application/json' \
   --data-raw '{
-  "username": "john.doe.com",
+  "username": "john.doe@gmail.com",
   "password": "Mk327452_"
 }'
 ```
 
 ### _SIGN UP_
+
+> This endpoint saves new customer to database and returns an authorization token
 
 ```sh
 curl -X POST \
@@ -36,7 +40,7 @@ curl -X POST \
   --header 'Content-Type: application/json' \
   --data-raw '{
   "full_names": "John Doe",
-  "username": "john.doe.com",
+  "username": "john.doe@gmail.com",
   "password": "Mk327452_",
   "confirm_password": "Mk327452_"
 }'
@@ -44,9 +48,11 @@ curl -X POST \
 
 ### _FORGOT PASSWORD_
 
+> This endpoint sends an email with instructions to reset password
+
 ```sh
 curl -X POST \
-  'http://127.0.0.1:5500/v1/forgot-password?username=john.doe.com' \
+  'http://127.0.0.1:5500/v1/forgot-password?username=john.doe@gmail.com' \
   --header 'Accept: */*' \
   --header 'User-Agent: Thunder Client (https://www.thunderclient.com)'
 ```
