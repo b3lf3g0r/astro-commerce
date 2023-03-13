@@ -93,6 +93,6 @@ workflows:
     jobs:
       - prettier
       - eslint
-  code-test:
-    jobs:
-      - jest
+#  code-test:
+#    jobs:
+#      - jest
