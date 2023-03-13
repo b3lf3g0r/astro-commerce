@@ -26,6 +26,7 @@ curl -X GET \
 ```
 
 ## _UPDATE FULLNAMES_
+
 > This endpoint updates customer fullnames
 
 ```sh
