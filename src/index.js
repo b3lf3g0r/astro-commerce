@@ -12,10 +12,13 @@ import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
 
+import { Authorization } from './api/middlewares/index.js';
 import { CustomerRoutes, CustomerAuthRoutes } from './api/routes/routes.js';
+
 dotenv.config();
 
 const app = express();
+const authorization = new Authorization();
 
 app.set('trust proxy', 1); // trust first proxy
 app.use(bodyParser.json()); // support json encoded bodies
@@ -35,6 +38,6 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.use('/v1', new CustomerAuthRoutes().init());
-app.use('/v1/customers', new CustomerRoutes().init());
+app.use('/v1/customers', authorization.IsCustomer, new CustomerRoutes().init());
 
 export { app };
